@@ -251,6 +251,8 @@ section{
     margin-bottom: 2rem;
     margin-top: 2rem;
     justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
 .about-details-container{
@@ -319,13 +321,16 @@ section{
     flex-direction: row;
     gap: 2.5rem;
     justify-content: space-around;
+    align-items: flex-start;
 }
 
 .article-container article {
     display: flex;
     width: 10rem;
-    justify-content: space-around;
     gap: 0.5rem;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .article-icon{
