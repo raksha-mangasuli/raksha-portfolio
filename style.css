@@ -359,6 +359,13 @@ section{
     color: black;
 }
 
+.project-description{
+    margin: 0 1rem 1rem;
+    color: rgb(85,85,85);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
 .project-btn{
     color: black;
     border-color: rgb(163,163,163);
