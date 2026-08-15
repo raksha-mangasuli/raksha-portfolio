@@ -284,6 +284,10 @@ section{
     border-color: rgb(163,163,163);
     text-align: center;
 }
+
+.details-container .icon{
+    cursor: default;
+}
 .section-container{
     gap: 4rem;
     height: 80%;
@@ -489,6 +493,75 @@ section{
 
 .email-icon {
   height: 2.5rem;
+}
+
+.copy-email-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0.25rem;
+  cursor: pointer;
+  color: rgb(53, 53, 53);
+  opacity: 0;
+  transition: opacity 150ms ease, color 150ms ease;
+}
+
+.contact-info-container:hover .copy-email-btn,
+.copy-email-btn:focus-visible {
+  opacity: 1;
+}
+
+.copy-email-btn:hover {
+  color: rgb(0, 0, 0);
+}
+
+.copy-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.copy-feedback {
+  position: absolute;
+  bottom: calc(100% + 0.4rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(0.25rem);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgb(230, 244, 234);
+  color: rgb(30, 110, 70);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(34, 139, 87, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 150ms ease, transform 150ms ease;
+}
+
+.copy-feedback-icon {
+  width: 1rem;
+  height: 1rem;
+  color: rgb(34, 139, 87);
+  flex-shrink: 0;
+}
+
+.copy-email-btn.copied .copy-feedback {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Touch devices have no hover, so keep the button visible */
+@media (hover: none) {
+  .copy-email-btn {
+    opacity: 1;
+  }
 }
 
 /*FOOTER SECTION*/
