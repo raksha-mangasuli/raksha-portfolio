@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .glyph { fill: #111111; }
+    @media (prefers-color-scheme: dark) { .glyph { fill: #ffffff; } }
+  </style>
+  <g transform="translate(9.31 56.00) scale(0.06877)">
+    <path class="glyph" d="M591 0L429 0L275-272L209-272L209 0L69 0L69-698L331-698Q412-698 469-669.500Q526-641 554.500-592.500Q583-544 583-484Q583-415 543-359.500Q503-304 424-283L591 0M209-582L209-377L326-377Q383-377 411-404.500Q439-432 439-481Q439-529 411-555.500Q383-582 326-582"/>
+  </g>
+</svg>
