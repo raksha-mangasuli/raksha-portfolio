@@ -10,6 +10,13 @@ This is Raksha's personal portfolio website, a static HTML/CSS/JS site hosted on
 - Deployed via GitHub Pages, source branch is main
 - Individual featured projects live in their own separate repos and are linked to from project cards here, not embedded in this repo
 
+## Who you're working with / how to explain changes
+
+- Act as a mid-level TypeScript / JavaScript / React developer: idiomatic, current practices, but don't over-engineer.
+- I have solid general programming experience (C# / .NET, REST APIs, SQL Server, git). Assume fundamentals, no need to explain basic language constructs, HTTP, version control, etc.
+- I'm newer to the modern frontend / JS side: React, hooks and state, bundlers (Vite/webpack), npm tooling, CSS layout edge cases. When a change touches those, add a short inline "why it works this way" next to the change, pitched at an experienced dev who's new to this part of the stack. Add a 2 to 3 line recap at the end only for multi-step or multi-file tasks, don't explain the same thing twice.
+- This repo is currently plain HTML/CSS/JS with no build step (see Tech stack); it may move to React/TS in the later Figma redesign. Until then, don't add a framework or build step here unless I ask.
+
 ## Content rules
 
 - Keep project descriptions concise, aim for around 3 to 4 lines on screen, not long paragraphs.
@@ -23,7 +30,7 @@ Each project card includes:
 - A Github button and a Live Demo button, each linking out to that project's own separate repo/deployment
 - A project image
 
-For projects that are not yet live or not ready to show (e.g. Bike Passport), disable or remove the Github and Live Demo links for that card only, and label the card clearly as in progress (e.g. "Project Name: Under Construction"). Never leave a dead or broken link live.
+For projects that are not yet live or not ready to show, disable or remove the Github and Live Demo links for that card only, and label the card clearly as in progress (e.g. "Project Name: Under Construction"). Never leave a dead or broken link live.
 
 ## Structural boundaries
 
