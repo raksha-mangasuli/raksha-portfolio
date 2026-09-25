@@ -42,3 +42,16 @@ function fallbackCopy(text, onSuccess) {
         document.body.removeChild(textarea);
     }
 }
+/* cursor glow */
+(function () {
+    const glow = document.getElementById("cursor-glow");
+    if (!glow) return;
+    document.addEventListener("mousemove", (e) => {
+        glow.style.left = e.clientX + "px";
+        glow.style.top = e.clientY + "px";
+        glow.style.opacity = "1";
+    });
+    document.addEventListener("mouseleave", () => {
+        glow.style.opacity = "0";
+    });
+})();
