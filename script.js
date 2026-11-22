@@ -46,6 +46,9 @@ function fallbackCopy(text, onSuccess) {
 (function () {
     const glow = document.getElementById("cursor-glow");
     if (!glow) return;
+    // Touch browsers fire an emulated mousemove on tap but never mouseleave,
+    // so the glow would get stuck on screen. Only enable on hover-capable devices.
+    if (!window.matchMedia("(hover: hover)").matches) return;
     document.addEventListener("mousemove", (e) => {
         glow.style.left = e.clientX + "px";
         glow.style.top = e.clientY + "px";
