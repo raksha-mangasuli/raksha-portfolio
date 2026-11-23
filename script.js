@@ -42,7 +42,7 @@ function fallbackCopy(text, onSuccess) {
         document.body.removeChild(textarea);
     }
 }
-/* cursor glow */
+/* CURSOR GLOW (disabled): remove this comment wrapper to restore; also see index.html and style.css
 (function () {
     const glow = document.getElementById("cursor-glow");
     if (!glow) return;
@@ -58,3 +58,4 @@ function fallbackCopy(text, onSuccess) {
         glow.style.opacity = "0";
     });
 })();
+*/

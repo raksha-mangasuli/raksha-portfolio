@@ -30,6 +30,8 @@ Each project card includes:
 - A Github button and a Live Demo button, each linking out to that project's own separate repo/deployment
 - A project image
 
+Layout rule: project cards (and the Experience cards) in a row must always render at equal height, regardless of content length. This is handled in CSS (`#experience .about-containers` and `#projects .about-containers` use `align-items: stretch`, and the project button row is pinned to the bottom of each card). Sections also size to their content (`section { height: auto }`), not a fixed vh, so big monitors don't get empty gaps between sections. Don't override it, and don't fix mismatched card heights by padding or trimming text to fit. Keep descriptions within the 3 to 4 line guideline anyway.
+
 For projects that are not yet live or not ready to show, disable or remove the Github and Live Demo links for that card only, and label the card clearly as in progress (e.g. "Project Name: Under Construction"). Never leave a dead or broken link live.
 
 ## Structural boundaries
@@ -37,6 +39,31 @@ For projects that are not yet live or not ready to show, disable or remove the G
 - Do not modify other project cards when editing one card. Changes should be scoped to the specific section being worked on.
 - Do not touch the blog repo from here, it is a separate Jekyll project with its own CLAUDE.md.
 - Always check for and avoid duplicate or nested HTML tags (e.g. nested `<p>` tags) after edits, validate the surrounding structure before considering an edit done.
+
+## Link rules
+
+- Every external link or link-like button (project Github / Live Demo, LinkedIn, GitHub, blog, CV PDF, etc.) must open in a new tab. For anchors use `target="_blank" rel="noopener noreferrer"`. For buttons use `onclick="window.open('URL', '_blank', 'noopener')"`. Never use `location.href` for external navigation.
+- Exceptions: in-page anchors (`#about`, `#projects`, ...) stay in the same tab, because they scroll the current page. `mailto:` links also don't need a target.
+- Check this for every new link, including new project cards.
+
+## Responsive verification (required for every UI change)
+
+Any new feature, section, card, or layout/CSS change must be checked at these widths before it counts as done:
+
+- Mobile: 375 to 430px
+- Tablet: 768px
+- Laptop: 1280 to 1440px
+- Desktop: 1920px
+- Big monitor: 2560px
+
+What to look for: horizontal overflow or clipped content, uneven card heights, content packed to one side with empty space on the other, large empty gaps between sections, text that is too small or too wide to read, and tap targets or buttons that wrap badly.
+
+How to check:
+- If the site is running locally (`npx serve .` on localhost:3000), take screenshots with headless Chrome, e.g. `chrome --headless=new --hide-scrollbars --window-size=2560,1440 --screenshot=out.png http://localhost:3000/` at each width, then look at them.
+- Headless Chrome won't go below roughly 500px wide, so a 390px screenshot is cropped from a wider layout and is NOT a valid mobile check. Verify mobile in DevTools device mode (Ctrl+Shift+M), or say it is unverified.
+- Taller windows exaggerate `vh`-based sizes (e.g. the nav height), so judge vertical gaps at a realistic window height, not a full-page-tall one.
+- Never claim a layout is verified at a width that wasn't actually checked. List which widths were checked and which weren't, and ask for a screenshot where tooling can't cover it.
+- Layout rules: avoid fixed `vh` heights for content sections, center any capped-width content block (`justify-content: center` / `margin: 0 auto`), and don't add new unscoped changes to shared classes such as `.about-containers` without checking every section that uses them.
 
 ## Design direction
 

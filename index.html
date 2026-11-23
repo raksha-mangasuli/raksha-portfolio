@@ -14,7 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Fraunces:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- CURSOR GLOW (disabled): uncomment to restore; also see script.js and style.css
     <div class="cursor-glow" id="cursor-glow"></div>
+    -->
     <nav id="desktop-nav">
         <div class="logo">Raksha</div>
         <div class="nav-links">
@@ -23,7 +25,7 @@
                 <li> <a href="#experience">Experience</a> </li>
                 <li> <a href="#projects">Projects</a> </li>
                 <!-- <li> <a href="#contact">Contact</a> </li> -->
-                <li> <a href="https://raksha-mangasuli.github.io/blog/" target="_blank">Blog</a> </li>
+                <li> <a href="https://raksha-mangasuli.github.io/blog/" target="_blank" rel="noopener noreferrer">Blog</a> </li>
             </ul>
         </div>
     </nav>
@@ -40,7 +42,7 @@
                 <li> <a href="#experience" onclick="toggleMenu()">Experience</a> </li>
                 <li> <a href="#projects" onclick="toggleMenu()">Projects</a> </li>
                 <!-- <li> <a href="#contact" onclick="toggleMenu()">Contact</a> </li> -->
-                <li> <a href="https://raksha-mangasuli.github.io/blog/" target="_blank">Blog</a> </li>
+                <li> <a href="https://raksha-mangasuli.github.io/blog/" target="_blank" rel="noopener noreferrer">Blog</a> </li>
             </div>
         </div>
     </nav>
@@ -56,7 +58,7 @@
             <div class="btn-container">
             <button
                 class="btn btn-color-2"
-                onclick="window.open('./assets/Raksha_S_CV_2026.pdf')">
+                onclick="window.open('./assets/Raksha_S_CV_2026.pdf', '_blank', 'noopener')">
                     Download CV </button>
             <button
                 class="btn btn-color-1"
@@ -68,13 +70,13 @@
             src="./assets/linkedin.png"
             alt="My LinkedIn profile"
             class="icon"
-            onclick="window.open('https://www.linkedin.com/in/raksha-mangasuli/', '_blank')"
+            onclick="window.open('https://www.linkedin.com/in/raksha-mangasuli/', '_blank', 'noopener')"
             />
             <img
             src="./assets/github.png"
             alt="My Github profile"
             class="icon"
-            onclick="window.open('https://github.com/raksha-mangasuli/', '_blank')"
+            onclick="window.open('https://github.com/raksha-mangasuli/', '_blank', 'noopener')"
             />
         </div>
 
@@ -202,7 +204,7 @@
         />
     </section>
     <section id="projects">
-        <p class="section-text-p1">Browse My Recent</p>
+        <p class="section-text-p1">Things I've Built</p>
         <h1 class="title">Projects</h1>
         <div class="experience-details-container">
             <div class="about-containers">
@@ -219,13 +221,13 @@
                 <div class="btn-container">
                     <button
                     class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://github.com/raksha-mangasuli/missing_migrants_data_vis'"
+                    onclick="window.open('https://github.com/raksha-mangasuli/missing_migrants_data_vis', '_blank', 'noopener')"
                     >
                     Github
                     </button>
                     <button
                     class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://raksha-mangasuli.github.io/missing_migrants_data_vis/'"
+                    onclick="window.open('https://raksha-mangasuli.github.io/missing_migrants_data_vis/', '_blank', 'noopener')"
                     >
                     Live Demo
                     </button>
@@ -244,42 +246,68 @@
                 <div class="btn-container">
                     <button
                     class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://github.com/raksha-mangasuli/spoke-record'"
+                    onclick="window.open('https://github.com/raksha-mangasuli/spoke-record', '_blank', 'noopener')"
                     >
                     Github
                     </button>
                     <button
                     class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://spoke-record.netlify.app/'"
+                    onclick="window.open('https://spoke-record.netlify.app/', '_blank', 'noopener')"
                     >
                     Live Demo
                     </button>
                 </div>
             </div>
-            <!-- <div class="details-container color-container">
+            <div class="details-container color-container">
                 <div class="article-container">
                     <img
-                    src="./assets/project-3.png"
-                    alt="Project 3"
+                    src="./assets/deutsch-sprechpartner.png"
+                    alt="Deutsch Sprechpartner"
                     class="project-img"
                     />
                 </div>
-                <h2 class="experience-sub-title project-title">Project Three</h2>
+                <h2 class="experience-sub-title project-title">Deutsch Sprechpartner: AI Speaking Practice</h2>
+                <p class="project-description">An AI German conversation partner for speaking practice. Chat or dictate, get corrections as you go, and keep a daily streak. Bring your own Claude API key. Built as a PWA.</p>
                 <div class="btn-container">
-                    <button 
+                    <button
                     class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://github.com/'"
+                    onclick="window.open('https://github.com/raksha-mangasuli/deutsch-sprechpartner', '_blank', 'noopener')"
                     >
                     Github
                     </button>
-                    <button 
+                    <button
                     class="btn btn-color-2 project-btn"
-                    onclick="location.href='https://github.com/'"
+                    onclick="window.open('https://raksha-mangasuli.github.io/deutsch-sprechpartner/', '_blank', 'noopener')"
                     >
                     Live Demo
                     </button>
                 </div>
-            </div> -->
+            </div>
+            <div class="details-container color-container">
+                <div class="article-container">
+                    <img
+                    src="./assets/pitboard.png"
+                    alt="Pitboard"
+                    class="project-img"
+                    />
+                </div>
+                <h2 class="experience-sub-title project-title">Pitboard: A Calm F1 Companion</h2>
+                <p class="project-description">A small F1 companion with a live countdown to the next race, driver and team standings, the season calendar and the latest results, shown in your own time zone. Built with vanilla JavaScript and Vite.</p>
+                <div class="btn-container">
+                    <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="window.open('https://github.com/raksha-mangasuli/pitboard', '_blank', 'noopener')"
+                    >
+                    Github
+                    </button>
+                    <button
+                    class="btn btn-color-2 project-btn"
+                    onclick="window.open('https://raksha-mangasuli.github.io/pitboard/', '_blank', 'noopener')"
+                    >
+                    Live Demo
+                    </button>
+                </div>
+            </div>
         </div>
         </div>
         <img src="./assets/arrow.png" 
@@ -341,7 +369,7 @@
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
-          <p><a href="https://www.linkedin.com/in/raksha-mangasuli/">LinkedIn</a></p>
+          <p><a href="https://www.linkedin.com/in/raksha-mangasuli/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
         </div>
       </div>
     </section>
@@ -353,7 +381,7 @@
                 <li> <a href="#experience">Experience</a> </li>
                 <li> <a href="#projects">Projects</a> </li>
                 <!-- <li> <a href="#contact">Contact</a> </li> -->
-                <li> <a href="https://raksha-mangasuli.github.io/blog/" target="_blank">Blog</a> </li>
+                <li> <a href="https://raksha-mangasuli.github.io/blog/" target="_blank" rel="noopener noreferrer">Blog</a> </li>
             </ul>
             </div>
         </nav>

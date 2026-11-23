@@ -143,7 +143,9 @@ list-style: none;
 /*SECTIONS*/
 section{
     padding-top: 4vh;
-    height: 96vh;
+    /* Size to content. A fixed 96vh made every section screen-tall, so on a big
+       monitor short sections left large empty gaps between them. */
+    height: auto;
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
@@ -356,6 +358,9 @@ section{
 .section-container{
     gap: 4rem;
     height: auto;
+    /* The photo + text block has a capped width (text max 700px). Without this it
+       packs to the left edge and leaves a big empty area on wide monitors. */
+    justify-content: center;
 }
 
 .about-pic-container{
@@ -474,6 +479,26 @@ section{
     border-color: #2C4568;
 }
 
+/* Experience + Project cards: equal height per row regardless of content length.
+   Flex items default to align-items: stretch, but .about-containers overrides it
+   with flex-start, so we undo that here for these two sections only
+   (the About Me .about-card tiles keep their own sizing). */
+#experience .about-containers,
+#projects .about-containers{
+    align-items: stretch;
+}
+
+/* Make each card a column so the button row can be pushed to the bottom
+   (margin-top: auto absorbs leftover space), keeping buttons aligned across cards. */
+#projects .details-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#projects .btn-container{
+    margin-top: auto;
+}
+
 /* BLOG */
 #blog {
     position: relative;
@@ -564,7 +589,7 @@ section{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  height: fit-content;
 }
 
 .contact-info-upper-container {
@@ -677,7 +702,7 @@ footer{
 footer p{
     text-align: center;
 }
-/*CURSOR GLOW*/
+/* CURSOR GLOW (disabled): remove this comment wrapper to restore; also see index.html and script.js
 .cursor-glow{
     position: fixed;
     width: 180px;
@@ -690,3 +715,4 @@ footer p{
     opacity: 0;
     transition: opacity 300ms ease;
 }
+*/
